@@ -8,5 +8,5 @@ zuul:
  ignoredServices: '*'
   routes:
     webscraping-service:
-      path: /echo/**
+      path: /webscraping/**
       url: http://localhost:8091
