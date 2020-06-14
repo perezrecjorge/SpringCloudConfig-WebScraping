@@ -1,14 +1,12 @@
 server:
   port: 8080 #the default port used for zuul service
   
+# Routing via url:
+# These simple url-routes do not get executed as a HystrixCommand, nor do they load-balance multiple URLs with Ribbon
+# It just take all request to the path echo/ and fordward to the server localhost:8091
 zuul:
-  ignoredServices: '*'
-  host:
-    connect-timeout-millis: 20000
-    socket-timeout-millis: 20000
-    routes:
-      sample-service: # Service to create as sample
-        path: /sample/** #path that will be intercepted
-        url: sample-service #which url the request will e mapped to
-        stripPrefix: false  #if zuul should replace the "/sample/" segment
-        sensitiveHeaders:
+ ignoredServices: '*'
+  routes:
+    webscraping-service:
+      path: /webscraping/**
+      url: http://localhost:8091
