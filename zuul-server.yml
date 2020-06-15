@@ -9,6 +9,4 @@ zuul:
   routes:
     webscraping-service:
       path: /api/v1/anuncios/**
-      serviceId: WEBSCRAPING-SERVICE
-      stripPrefix: false
       url: http://localhost:8091
