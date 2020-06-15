@@ -8,5 +8,5 @@ zuul:
  ignoredServices: '*'
   routes:
     webscraping-service:
-      path: /**
+      path: /api/v1/anuncios/**
       url: http://localhost:8091
