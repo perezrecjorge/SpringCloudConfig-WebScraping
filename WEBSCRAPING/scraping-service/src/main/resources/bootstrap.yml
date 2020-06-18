@@ -1,0 +1,11 @@
+server:
+  port: ${GREETING_PORT:8080}
+
+spring:
+  application:
+    name: scraping-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server

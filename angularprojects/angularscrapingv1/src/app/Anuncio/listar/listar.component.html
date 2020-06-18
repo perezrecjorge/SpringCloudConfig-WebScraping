@@ -1,0 +1,37 @@
+<div class="container" style="margin-bottom: 30px;">
+    <div class="text-center">
+        <a href="http://localhost:4200/" style="align-content: center;"><button class="btn btn-info">NUEVA BUSQUEDA</button></a>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header">
+            <h3>Anuncios</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr style="text-align: center;">
+                        <th>TITULO</th>
+                        <th>PRECIO</th>
+                        <th>AÑO</th>
+                        <th>CVS</th>
+                        <th>KMS</th>
+                        <th>ANUNCIO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let anuncio of anuncios" class="text-center">
+                        <td>{{anuncio.title}}</td>
+                        <td>{{anuncio.price}}</td>
+                        <td>{{anuncio.cvs}}</td>
+                        <td>{{anuncio.ano}}</td>
+                        <td>{{anuncio.kms}}</td>
+                        <td>
+                            <a href="{{anuncio.enlace}}" target="_blank"><button class="btn btn-success pull-right" >IR AL ANUNCIO</button></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
