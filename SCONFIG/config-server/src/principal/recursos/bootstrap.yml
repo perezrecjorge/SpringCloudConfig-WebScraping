@@ -10,7 +10,6 @@ spring:
         git:
           uri: ${CONFIG_REPO_URI:https://github.com/perezrecjorge/config-repo}
           username: ${CONFIG_REPO_USERNAME:perezrecjorge}
-          password: ${CONFIG_REPO_PASSWORD:Moniya.97}
 
 eureka:
   client:
